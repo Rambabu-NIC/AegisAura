@@ -1,0 +1,167 @@
+﻿
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Hotel</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Lobster+Two|Noto+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        .container{
+            max-width: 100% !important;
+        }
+
+        .font-face {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700; /* Bold */
+            font-size: 36px;
+            color:crimson; /* Tomato color */
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adding shadow for effect */
+            letter-spacing: 1.5px; /* Adding letter spacing for readability */
+            text-transform: uppercase; /* Making the text all uppercase */
+          
+        }
+
+        .slogan {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            color: black;
+            text-align: center;
+            letter-spacing: 1px;
+            font-style: italic;
+            margin-top:-4%;
+        }
+
+        .containerlogo {
+            text-align: center;
+           
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light text-capitalize main-font-family">
+        <div class="container">
+            <div class="containerlogo">
+                <label class="font-face">Aegis Aura</label>
+                <p class="slogan">Your armor of trust</p>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="show-menu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#room">rooms</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Features
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">link</a>
+                            <a class="dropdown-item" href="#">Another link</a>
+                            <a class="dropdown-item" href="#">Another link</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">contacts</a>
+                    </li>
+                    <li class="nav-item book d-flex align-items-center">
+                        <a class="nav-link" href="#">book now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="noto-font-family">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <h3>Useful links</h3>
+                        <ul class="text-capitalize">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Rooms</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <h3>Find us</h3>
+                        <p>
+                           address 
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 form">
+                        <h3>News letter</h3>
+                        <form>
+                            <input type="email" placeholder="Email">
+                            <input type="submit">
+                        </form>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright noto-font-family">
+        <p>
+            © 2024 All Rights Reserved. Design by
+                <label style="color:brown;font-weight:700">AegisAura</label></p>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+
+            'use strict';
+
+            var winH = $(window).height();
+
+            $('header').height(winH);
+
+            $('.navbar ul.navbar-nav li a').on('click', function (e) {
+
+                var getAttr = $(this).attr('href');
+
+                e.preventDefault();
+                $('html').animate({scrollTop: $(getAttr).offset().top}, 1000);
+            });
+        });
+    </script>
+</body>
+</html>

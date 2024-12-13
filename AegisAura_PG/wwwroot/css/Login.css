@@ -1,0 +1,94 @@
+﻿/* Background Gradient */
+body {
+    background: linear-gradient(to right, #f85a40, #ffb92d);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Login Form Styling */
+.login-container {
+    max-width: 450px;
+    width: 100%;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+    .login-container h3 {
+        margin-bottom: 30px;
+        text-align: center;
+        font-weight: bold;
+        color: #333;
+        font-size: 26px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+.form-label {
+    font-size: 14px;
+    color: #555;
+    font-weight: 600;
+}
+
+.form-control {
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 12px;
+    transition: border 0.3s;
+    border: 1px solid #ccc;
+}
+
+    .form-control:focus {
+        border-color: #f85a40;
+        box-shadow: 0 0 8px rgba(248, 90, 64, 0.6);
+    }
+
+.btn-custom {
+    background-color: #ffb92d; /* Yellow Button Color */
+    color: #fff;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-custom:hover {
+        background-color: #ff9c00; /* Slightly darker yellow on hover */
+    }
+
+.forgot-password {
+    text-align: center;
+    margin-top: 10px;
+}
+
+    .forgot-password a {
+        color: #f85a40;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        margin-top: 60px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AegisAura_PG.props" />
+</Project>
